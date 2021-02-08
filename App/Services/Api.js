@@ -14,9 +14,9 @@ const create = (baseURL = 'https://api.jokolodang.com/api/v1/payments') => {
   const getPayment = () => api.get(``)
   const addPayment = (data) => api.post(``, data)
   const getPaymentId = (id) => api.get(`/${id}`)
-  const updatePaymentId = (id, data) => api.put(`/${id}`, data)
+  const updatePaymentId = (data) => api.put(`/${data.id}`, data.data)
   const deletePaymentId = (id) => api.delete(`${id}`)
-  const statusPaymentId = (id, status) => api.patch(`/${id}/${status}`) // status: 'activate' or 'deactivaate'
+  const statusPaymentId = (data) => api.patch(`/${data.id}/${data.status}`) // data.status: 'activate' or 'deactivaate'
 
   return {
     getPayment,

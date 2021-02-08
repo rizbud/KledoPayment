@@ -1,21 +1,28 @@
+import { scaleWidth, scaleHeight } from 'osmicsx';
+
 export default {
   // width & height
-  "w-200": { width: 200 },
-  "h-200": { height: 200 },
+  "hw-13": { height: scaleWidth(13) },
 
-  // color
-  "primary": "#f9bc15",
-  "soft-secondary": "rgba(53, 73, 94, 0.85)",
+  // padding
+  "px-2": { paddingHorizontal: scaleWidth(2) },
+  "px-5": { paddingHorizontal: scaleWidth(5) },
+  "py-1.2": { paddingVertical: scaleHeight(1.2) },
+  "py-1.5": { paddingVertical: scaleHeight(1.5) },
+  "py-2": { paddingVertical: scaleHeight(2) },
 
-  // background color
-  "bg-primary": { backgroundColor: "#f9bc15" },
-  "bg-soft-secondary": { backgroundColor: "rgba(53, 73, 94, 0.85)" },
+  // margin
+  "mx-5": { marginHorizontal: scaleWidth(5) },
+  "ml-5": { marginLeft: scaleWidth(5) },
+  "mt-1": { marginTop: scaleHeight(1) },
+  "mt-2": { marginTop: scaleHeight(2) },
+  "mb-2": { marginBottom: scaleHeight(2) },
 
-  // border color
-  "border-primary": { borderColor: "#f9bc15" },
-  "border-soft-secondary": { borderColor: "rgba(53, 73, 94, 0.5)" },
+  // font size
+  "text-title": { fontSize: scaleWidth(5.3) },
+  "text-normal": { fontSize: scaleWidth(4) },
 
-  // text color
-  "text-primary": { color: "#f9bc15" },
-  "text-soft-secondary": { color: "rgba(53, 73, 94, 0.5)" },
+  // position
+  "bottom-5": { bottom: scaleWidth(5) },
+  "right-5": { right: scaleWidth(5) },
 }

@@ -53,7 +53,7 @@ export const addPaymentSuccess = (state, { data }) =>
       ...state.list,
       data: [
         ...state.list.data,
-        ...data
+        data
       ],
       fetching: false,
       error: null
@@ -86,7 +86,7 @@ export const deletePaymentIdFailure = (state, { error }) =>
 export const statusPaymentIdRequest = (state) =>
   state.merge({ ...state, detail: { ...state.detail, fetching: true, error: null } })
 export const statusPaymentIdSuccess = (state, { data }) =>
-  state.merge({ ...state, detail: { ...state.detail, data: null, fetching: false, error: null } })
+  state.merge({ ...state, detail: { ...state.detail, data, fetching: false, error: null } })
 export const statusPaymentIdFailure = (state, { error }) =>
   state.merge({ ...state, detail: { ...state.detail, fetching: false, error } })
 

@@ -27,6 +27,7 @@ export default function * root () {
     takeLatest(StartupTypes.STARTUP, startup),
 
     takeLatest(StaticDataTypes.GET_ROOT_REQUEST, getRoot, api),
+
     takeLatest(PaymentTypes.GET_PAYMENT_REQUEST, getPayment, api),
     takeLatest(PaymentTypes.ADD_PAYMENT_REQUEST, addPayment, api),
     takeLatest(PaymentTypes.GET_PAYMENT_ID_REQUEST, getPaymentId, api),
